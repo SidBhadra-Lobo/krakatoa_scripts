@@ -4,6 +4,12 @@
 
 #Currently, intended to process one sequencing run at a time.
 
+#get usage information
+if [ "$1" == "" ] || [ "$1" == "-h"  ]; then
+  echo "Usage: `basename $0` [Use this script to demultiplex nextseq data using bcl2fastq (enter run number) then choose if you want to convert the fastq files to fasta (enter 1 or 0)]"
+  exit 0
+fi
+
 # replace path to sequence run raw data location, likely /git/nextseq/<your run>/.
 echo "Enter the desired run number (4 digits, like 0001), then press [ENTER]: ";
 read run_number;
