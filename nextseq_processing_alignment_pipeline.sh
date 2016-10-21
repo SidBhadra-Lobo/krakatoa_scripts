@@ -23,13 +23,13 @@ dir_name=$(echo $run | sed 's/.*nextseq\///' | cut -f 1,3 -d_ );
 
 d=$(date);
 
-# echo Starting demultiplexing. >> /git/nextseq/processed/"$dir_name".logfile;
-# echo $d >> /git/nextseq/processed/"$dir_name".logfile;
+echo Starting demultiplexing. >> /git/nextseq/processed/"$dir_name".logfile;
+echo $d >> /git/nextseq/processed/"$dir_name".logfile;
 
 
-# #Run illumina's bcl2fastq conversion tool. 
-# # -R for location of your run. nohup*.out is your bcl2fastq log file, '>' chooses a save location.
-# nohup /usr/local/bin/bcl2fastq -R "$run" -o /git/nextseq/processed/"$dir_name" -r 16 -d 16 -p 16 -w "$sample_count" > /git/nextseq/processed/nohup_"$dir_name".out 2>&1 &
+#Run illumina's bcl2fastq conversion tool. 
+# -R for location of your run. nohup*.out is your bcl2fastq log file, '>' chooses a save location.
+nohup /usr/local/bin/bcl2fastq -R "$run" -o /git/nextseq/processed/"$dir_name" -r 16 -d 16 -p 16 -w "$sample_count" > /git/nextseq/processed/nohup_"$dir_name".out 2>&1 &
 
 
 #If the user wants to convert the fastq.gz files into fastas.
