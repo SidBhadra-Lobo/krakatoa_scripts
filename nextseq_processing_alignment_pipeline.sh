@@ -47,11 +47,11 @@ then
     echo $d >> /git/nextseq/processed/"$dir_name".logfile;
 
     #Get all Lane 1 Read 1 fastq files, not including "undetermined"
-    ls /git/nextseq/processed/"$dir_name"/*_*/*L001*R1*.gz > /git/nextseq/processed/"$dir_name"/L1R1_list.txt;
+    ls /git/nextseq/processed/"$dir_name"/*_*/*L001*R1*.gz > /git/nextseq/processed/"$dir_name"/L1R1_"$dir_name"_list.txt;
 
 
     #loop through all L001_R1 files generated from demultiplexing.
-    for fastq_file in $(less /git/nextseq/processed/"$dir_name"/L1R1_list.txt);
+    for fastq_file in $(less /git/nextseq/processed/"$dir_name"/L1R1_"$dir_name"_list.txt);
 
     do
         #get "name" for input in nextseq_gzip_mrg.pl
