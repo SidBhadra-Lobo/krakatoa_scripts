@@ -19,11 +19,17 @@ else
 fi
 
 
-echo "Give the name you wish to use for the fasta converted file, then press [Enter]: ";
+echo "Give the name to use for the fasta converted file, then press [Enter]: ";
 read name;
 
-echo "Enter name of the organism you wish to run (as hs, mm, rn), then press [Enter]: ";
+echo "Enter name of the organism to run (hs, mm, rn; only), then press [Enter]: ";
 read org;
+
+if [[ "$org" -ne 'hs' || "$org" -ne 'mm' || "$org" -ne 'rn' ]]; then
+    #Wrong organism names.
+    echo Not a valid organism name. Try again.
+    exit;
+fi
 
 echo ...;
 echo path chosen: "$mito_path";
@@ -40,7 +46,7 @@ mito_array=("$mito_path"/*.gz);
 
 for file in $mito_array;
 do
-/usr/bin/perl /home/sbhadral/scripts/nextseq_gzip_mrg.pl "$file" "$name" DNA 0 >> /home/sbhadral/"$name".logfile 2>&1 &
+/usr/bin/perl /home/sbhadral/scripts/nextseq_gzip_mrg.pl "$file" "$name" DNA 0 >> "$mito_path"/"$name".logfile 2>&1 &
 done;
 
 wait;
@@ -50,13 +56,23 @@ wait;
 if [[ "$org" == 'hs' ]]; then
 
 echo Running blast against hs database;
-bash /home/sbhadral/mRNAseq/seq_code/mseek/sh/blast_"$org"_mt.sh /home/sid/mRNAseq/seq_code/mseek /home/sid/mRNAseq/seq_code/mseek/ref/mt_ref /home/sbhadral/*.fa "$mito_path" "$mito_path" mt_"$org" 8 >> /home/sbhadral/"$name".logfile 2>&1 &
+
+# for names in $(echo "$mito_array");
+# do
+
+# running as blast_hs_mt.sh top db indir odir ext threads (no names yet).
+bash /home/sbhadral/mRNAseq/seq_code/mseek/sh/blast_"$org"_mt.sh /home/sbhadral/mRNAseq/seq_code/mseek ref/mt_ref "$mito_path" "$mito_path" mt_"$org" 8 >> "$mito_path"/"$name".logfile 2>&1 &
+
+# done;
 
 else
 
 echo Running blast against "$org" database;
-bash /home/sbhadral/mRNAseq/seq_code/mseek/sh/blast_"$org"_mt.sh /home/sid/mRNAseq/seq_code/mseek /home/sid/mRNAseq/seq_code/mseek/ref/mt_"$org" /home/sbhadral/*.fa "$mito_path" "$mito_path" mt_"$org" 8 >> /home/sbhadral/"$name".logfile 2>&1 &
+bash /home/sbhadral/mRNAseq/seq_code/mseek/sh/blast_"$org"_mt.sh /home/sbhadral/mRNAseq/seq_code/mseek ref/mt_"$org" "$blast_path" "$blast_path"q mt_"$org" 8 >> "$mito_path"/"$name".logfile 2>&1 &
 
 fi;
 
 wait;
+
+#WORKS UP TO HERE,  still need to get @names to be read in for blast @names.
+
