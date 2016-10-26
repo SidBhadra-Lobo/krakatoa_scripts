@@ -75,13 +75,15 @@ my $csv = Class::CSV->new(
   fields         => [qw/Sample_ID Sample_Name Sample_Plate Sample_Well I7_Index_ID index Sample_Project Description/] # This is for the [Data] section of the csv, even though the columns over lap with other sections.
 );
 
+#Build header and settings section info.
 $csv->add_line(['[Header]']);
 $csv->add_line(['IEMFileVersion', 4]);
-$csv->add_line(['Experiment Name', "Run_$run_num"]); # Need to get rid of double quotes that show up on Experiment Name.
+$csv->add_line(['ExperimentName', "Run_$run_num"]); # Need to get rid of double quotes that show up on Experiment Name.
+$csv->add_line(['InvestigatorName', 'AnithaJayaprakash']);
 $csv->add_line(['Date', "$date"]);
 $csv->add_line(['Workflow', 'GenerateFASTQ']);
-$csv->add_line(['Application', 'NextSeq FASTQ Only']);
-$csv->add_line(['Assay', 'TruSeq HT']);
+$csv->add_line(['Application', 'NextSeqFASTQOnly']);
+$csv->add_line(['Assay', 'TruSeqHT']);
 $csv->add_line(['Description', "$descp"]);
 $csv->add_line(['Chemistry', 'Default']);
 $csv->add_line(['']);
@@ -90,11 +92,19 @@ $csv->add_line(["$read1"]);
 $csv->add_line(["$read2"]);
 $csv->add_line(['[Settings]']);
 $csv->add_line(['']);
+
+#Build data section.
 $csv->add_line(['[Data]']);
 $csv->add_line(['Sample_ID', 'Sample_Name', 'Sample_Plate', 'Sample_Well', 'I7_Index_ID', 'index', 'Sample_Project', 'Description']);
 $csv->add_line({
   Sample_ID   => 'sampleblah',
-  Sample_Name => 'sample2name'
+  Sample_Name => 'sample2name',
+  Sample_Plate => 'test',
+  Sample_Well => 'test',
+  I7_Index_ID => "A00what",
+  index => "$brcd_seq",
+  Sample_Project => 'sampleproject',
+  Description => "$descp"
 });
 
 $csv->print();
