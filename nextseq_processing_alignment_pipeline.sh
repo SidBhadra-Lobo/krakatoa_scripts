@@ -35,7 +35,7 @@ dir_name=$(echo $run | sed 's/.*nextseq\///' | cut -f 1,3 -d_ );
 
 d=$(date);
 
-###COMMENT OUT IF YOU WANT TO ONLY DO CONVERSION######
+
 if [[ "$demul" == 1 ]]; then
 
 echo Starting demultiplexing. >> /git/nextseq/processed/"$dir_name".logfile;
@@ -54,7 +54,7 @@ fi;
 
 #wait for demultiplex to finish before conversion.
 wait;
-###COMMENT OUT IF YOU WANT TO ONLY DO CONVERSION######
+
 
 ### MOVE REPORTS/ TO DROPBOX?
 
