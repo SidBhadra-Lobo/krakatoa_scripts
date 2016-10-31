@@ -1,6 +1,6 @@
 {
   "name": "Krakatoa scripts",
   "tagline": "Scripts to be run on the Krakatoa server.",
-  "body": "### Sid's Github Page\r\nThis page has some working and in progress examples of scripts and code I've worked on recently. This includes, `bash`, `perl`, `php`, and `html`.",
+  "body": "### Sid's Github Page\r\nThis page has some working and in progress examples of scripts and code I've written on recently. This includes, `bash`, `perl`, `php`, and `html`.",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
