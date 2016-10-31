@@ -1,0 +1,113 @@
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+    <link rel="stylesheet" href="style.css">
+
+    <img id="top" src="images/top.png" alt="">
+    <br>
+    <img id="banner" src="images/banner_girihlet.jpg" alt="">
+
+    <h1>Data Submission Page</h1>
+
+    </head>
+    
+    <body>
+
+
+    <p><a href="/docs/SubmissionForm.xlsx">Download Submission Form</a>
+        <img src="images/excel.gif" height="16" width="16" align="left" border="0"><p>
+
+    <p><a href="https://www.dropbox.com/request/sGEYIe96uMWPGjAvMIBG" target="_blank" class="dropbox-saver">Upload Submission Form</a>
+        <img src="images/dropbox_logo.png" height="16" width="16" align="left" border="0"></p>
+
+    <!-- <a href="https://www.dropbox.com/request/sGEYIe96uMWPGjAvMIBG" name="button" class="dropbox-saver"></a> -->
+
+    <!-- <iframe src="images/dropbox_logo.svg" height="25%" width="50%" name="dropbox"></iframe> -->
+
+
+
+    <br>**Not sure if want a upload/submit button (non-functional)**<br>
+
+    <li class="buttons">
+    <div><input id="element_1" name="element_1" class="element file" type="file"></div>
+    <input type="hidden" name="form_id" value="1159933">
+    </li>
+
+    <li class="buttons">
+    <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit Form" href="https://www.dropbox.com/request/sGEYIe96uMWPGjAvMIBG" target="_blank">
+    </li>
+
+    <!-- Add address to for submission form link to submission table example -->
+
+    <br>**Table is experimental (non-functional)**
+
+    <h2>Sample Submission Form:</h2>
+
+    <table>
+    <tr>
+    <th>Sample Name ID</th>
+    <th>Species</th>
+    <th>Type of sample (Cell, Tissue DNA/RNA, etc.)</th>
+    <th>Researcher</th>
+    <th>Concentration [ng/&mu;L] (if applicable)</th>
+    <th>Service (Select from drop-down menu)<form action="selection.php">
+      <select name="Services">
+        <option value="Service1">Service1</option>
+        <option value="Service2">Service2</option>l
+        <option value="service3">Service3</option>
+        <option value="Service4">Service4</option>
+      </select></th>
+    <th>Volume (if applicable)</th>
+    <th>Dissolved in (select from drop-down menu)<form action="selection.php">
+      <select name="Services">
+        <option value="Buffer1">Buffer1</option>
+        <option value="Buffer2">Buffer2</option>
+        <option value="Buffer3">Buffer3</option>
+        <option value="Buffer4">Buffer4</option>
+      </select></th>
+    <th>Additional Notes</th>
+    <th>Barcode</th>
+    <th>E-mail</th>
+    <th>Phone #</th>
+
+    </tr>
+    <tr>
+    <td>Example123</td>
+    <td>Homo sapiens</td>
+    <td>HEK293T DNA Extract</td>
+    <td>John/Jane Doe</td>
+    <td>100 ng/&mu;L</td>
+    <td>DNA seq</td>
+    <td>75 &mu;L</td>
+    <td>TE Buffer</td>
+    <td>cells are mutated with radiation</td>
+    <td>Truseq 16</td>
+    <td>j.doe@web.org</td>
+    <td>111-222-3344</td>
+    </tr>
+
+    </table>
+
+    <h2>Things to Note:</h2>
+
+    <ol>
+    <li>For DNA samples, send up to 1 &mu;g or more of DNA in a maximum of 10 &mu;L. Dissolved in TE Buffer or H<sub>2</sub>O.</li>
+    <li>Raw samples (i.e. tissues or cell pellets) that will undergo RNA extraction and subsequent RNA sequencing must be suspended in Trizol.</li>
+    <li>For Circular RNA Sequencing, send 5-10 &mu;g of Total RNA in a maximum of 10 &mu;L.</li>
+    <li>For RNA Seq send 1 &mu;g or more in a maximum of 10 &mu;L.</li>
+    <li>For pre-made deep sequencing libraries, please send us 12 &mu;L (of 10nM if possible) along with the sequences of the barcodes.
+    </ol>
+
+    <td id="footer" align="center">
+    <a href="mailto:support@girihlet.com">support@girihlet.com</a>
+    <font class="smallfooter">
+        <br>
+        <font size="2">Copyright &copy; Girihlet Inc. All rights reserved</font>
+    </td>
+
+    <br /><img id="bottom" src="images/bottom.png" alt="">
+
+
+    </body>
+    </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="Sampletablediv">
+    <table id="SampleTable" border="1">
+        <tr>
+            <td>#</td>
+            <td>Sample</td>
+            <td>Delete Row</td>
+            <td>Add Row</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input size=25 type="text" id="samplebox" required="required" placeholder="MySample"/></td>
+            <td><input type="button" id="delSamplebutton" value="Delete" onclick="deleteRow(this)" tabindex="-1"/></td>
+            <td><input type="button" id="addmoreSamplebutton" value="Add More Samples" onclick="insRow()" tabindex="-1"/></td>
+        </tr>
+    </table>
+
+<br>
+
+<input type="submit" value="Submit Sample(s)">
+
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.expando-button {
+	float:left;
+	height:23px;
+	width:23px;
+	margin:2px 5px 2px 0;
+	background:transparent none no-repeat scroll center center;
+	cursor:pointer
+}
+img {
+	width: 50%;
+}
+.expando-button.expanded.video{
+	background-image:url(sprite-expando.B29xy2bWnls.png);
+	background-position:0px -29px;
+	background-repeat:no-repeat
+}
+.expando-button.expanded.video:hover{
+	background-image:url(sprite-expando.B29xy2bWnls.png);
+	background-position:0px 0px;
+	background-repeat:no-repeat
+}
+.expando-button.expanded.selftext{
+	background-image:url(sprite-expando.B29xy2bWnls.png);
+	background-position:0px -29px;
+	background-repeat:no-repeat
+}
+.expando-button.expanded.selftext:hover{
+	background-image:url(sprite-expando.B29xy2bWnls.png);
+	background-position:0px 0px;
+	background-repeat:no-repeat
+}
+.expando-button.collapsed.selftext{
+	background-image:url(sprite-expando.B29xy2bWnls.png);
+	background-position:0px -145px;
+	background-repeat:no-repeat
+}
+.expando-button.collapsed.selftext:hover{
+	background-image:url(sprite-expando.B29xy2bWnls.png);
+	background-position:0px -116px;
+	background-repeat:no-repeat
+}
+.expando-button.collapsed.video{
+	background-image:url(sprite-expando.B29xy2bWnls.png);
+	background-position:0px -87px;
+	background-repeat:no-repeat
+}
+.expando-button.collapsed.video:hover{
+	background-image:url(sprite-expando.B29xy2bWnls.png);
+	background-position:0px -58px;
+	background-repeat:no-repeat
+}

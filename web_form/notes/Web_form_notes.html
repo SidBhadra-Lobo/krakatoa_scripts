@@ -1,0 +1,29 @@
+<div>
+
+<br />**Web Form Notes**<br />
+
+<br />To run .html from server/command-line:<br />
+
+<br />First, do `python -m SimpleHTTPServer`<br />
+	<br />This will serve http on default port 8000<br />
+	<br />You can run `python -m SimpleHTTPServer &` then press `return key`, to run it in the background and still have access to command line.<br />
+
+<br />Then, go to browser and type into the URL bar the IPaddress:portnumber. (e.g. 10.1.10.8:8000)<br />
+	<br />From this you can choose which .html file to look at. (e.g. 10.1.10.8:8000/my_file.html)<br />
+
+<br />This will display your .html file in your browser. You can also do this locally by replacing the IPaddress with localhost:8000.<br />
+
+
+<br />Managing Server jobs:<br />
+
+<br />Type `jobs` to see what's running. (e.g. [4]+  Running                 python -m SimpleHTTPServer &)<br />
+
+<br />From the list of jobs, you can then kill your jobs using 'kill %job_number' (e.g. kill %4)<br />
+
+<br />To put a job in the background for foreground (e.g. `bg %4` or `fg %4`)
+
+
+<br />Another Option:<br />
+
+<br />Use MAMP, already has Apache and other things built-in.<br />
+<br />Easy to use and run from Applications/ .<br />

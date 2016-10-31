@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+label{display:inline-block;width:100px;margin-bottom:10px;}
+</style>
+    
+    <!-- <link rel="stylesheet" href='style.css'> -->
+
+    <img id="top" src="images/top.png" alt="">
+    <br>
+    <a href="http://girihlet.com/">
+        <img id="banner" src="images/banner_girihlet.jpg" alt="">
+    </a>
+
+<title>Sample Submission</title>
+<!-- Tiny icon is not working  -->
+<!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+
+<script type="text/javascript" src="table_builder.js"></script>
+
+</head>
+
+<body>
+
+<form method="post" action= "parse_names.php">
+
+<h4>For small sample sets, please fill out the fields below.</h4>
+
+<label>First Name:</label>
+<input type="text" required="required" name="firstname" placeholder="J">
+<br>
+
+<label>Last Name:</label>
+<input type="text" required="required" name="lastname" placeholder="Doe">
+<br>
+
+<label>Email:</label>
+<input type="text" required="required" name="email" placeholder="JD@email.com">
+<br>
+
+<!-- <p> 
+  <input type="button" value="Add Sample" onClick="addRow('dataTable')" /> 
+  <input type="button" value="Remove Sample" onClick="deleteRow('dataTable')" /> 
+  <p>(Actions apply only to entries with check marked check boxes.)</p>
+</p> -->
+
+<!-- <fieldset class="samplerow"> -->
+<!-- <label>Sample Entry:</label> -->
+<!-- <table id="dataTable" class="form" width="400">
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="check" checked="checked" tabindex="-1" ></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" name="samplename1" placeholder="MySample1">
+                        </td>
+                    </tr>
+                        <td>
+                            <input type="checkbox" name="check" checked="checked" tabindex="-1"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" name="samplename3" placeholder="MySample3">
+                        </td>
+                    </tr>
+                    <tr style="display: none;">
+                        <td>
+                            <input type="checkbox" name="check" checked="checked" tabindex="-1"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" name="samplename4" placeholder="MySample4">
+                        </td>
+                    </tr>
+                    <tr style="display: none;">
+                        <td>
+                            <input type="checkbox" name="check" checked="checked" tabindex="-1"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" name="samplename5" placeholder="MySample5">
+                        </td>
+                    </tr>
+                    <tr style="display: none;">
+                        <td>
+                            <input type="checkbox" name="check" checked="checked" tabindex="-1"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" name="samplename6" placeholder="MySample6">
+                        </td>
+                    </tr>
+               </tbody>
+                </table> -->
+
+
+
+<label>Sample Entry:</label>
+
+<td><input size=25 type="number" id="sampleCount" name="samplenumber" required="required" placeholder="#" min="1" max="6"/></td>
+
+<input type="submit" onclick="newTable()" value="Submit Info"></button>
+
+<!-- <br>
+<input type="submit" value="Submit Info" > -->
+
+</form>
+
+<h4>For large sample sets:</h4>
+    <p><a href='docs/SubmissionForm.xlsx'>Download Submission Form</a>
+        <img src='images/excel.gif' height="16" width="16" align="left" border="0"><p>
+
+    <p><a href='https://www.dropbox.com/request/sGEYIe96uMWPGjAvMIBG' target="_blank" class="dropbox-saver">Upload Submission Page</a>
+        <img src='images/dropbox_logo.png' height="16" width="16" align="left" border="0"></p>
+
+    <td id="footer" align="center">
+    <a href='help_page.html' style="margin-left: 10px">Help Page</a>
+
+    <font class="smallfooter">
+        <br>
+        <font size="2" style="margin-left: 10px">Copyright &copy; Girihlet Inc. All rights reserved</font>
+    </td>
+
+<br><img id="bottom" src="images/bottom.png" alt="">
+
+</body>
+</html>
