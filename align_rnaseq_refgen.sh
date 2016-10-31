@@ -3,7 +3,11 @@
 
 # cd /home/sbhadral/data;
 
+<<<<<<< HEAD
 FILE=$(ls /home/sbhadral/data/fastqs/bat_fastqs/bat_tumorCellLine.fastq.gz)
+=======
+FILE=$(ls /home/sbhadral/data/fastqs/bat_tumorCellLine.fastq.gz)
+>>>>>>> 7e804b43a40cfa2c2dd7da3ebdd254bdbb2e9286
 
 #index ref, do only once.
 

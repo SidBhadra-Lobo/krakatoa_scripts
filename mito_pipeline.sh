@@ -25,11 +25,19 @@ read name;
 echo "Enter name of the organism to run (hs, mm, rn; only), then press [Enter]: ";
 read org;
 
+<<<<<<< HEAD
 # if [[ "$org" -ne 'hs' || "$org" -ne 'mm' || "$org" -ne 'rn' ]]; then
 #     #Wrong organism names.
 #     echo Not a valid organism name. Try again.
 #     exit;
 # fi
+=======
+if [[ "$org" -ne 'hs' || "$org" -ne 'mm' || "$org" -ne 'rn' ]]; then
+    #Wrong organism names.
+    echo Not a valid organism name. Try again.
+    exit;
+fi
+>>>>>>> 7e804b43a40cfa2c2dd7da3ebdd254bdbb2e9286
 
 echo ...;
 echo path chosen: "$mito_path";
@@ -61,14 +69,22 @@ echo Running blast against hs database;
 # do
 
 # running as blast_hs_mt.sh top db indir odir ext threads (no names yet).
+<<<<<<< HEAD
 bash /home/sbhadral/mRNAseq/seq_code/mseek/sh_auto/blast_"$org"_mt.sh /home/sbhadral/mRNAseq/seq_code/mseek ref/mt_ref "$mito_path" "$mito_path" mt_"$org" 8 >> "$mito_path"/"$name".logfile 2>&1 &
+=======
+bash /home/sbhadral/mRNAseq/seq_code/mseek/sh/blast_"$org"_mt.sh /home/sbhadral/mRNAseq/seq_code/mseek ref/mt_ref "$mito_path" "$mito_path" mt_"$org" 8 >> "$mito_path"/"$name".logfile 2>&1 &
+>>>>>>> 7e804b43a40cfa2c2dd7da3ebdd254bdbb2e9286
 
 # done;
 
 else
 
 echo Running blast against "$org" database;
+<<<<<<< HEAD
 bash /home/sbhadral/mRNAseq/seq_code/mseek/sh_auto/blast_"$org"_mt.sh /home/sbhadral/mRNAseq/seq_code/mseek ref/mt_"$org" "$blast_path" "$blast_path"q mt_"$org" 8 >> "$mito_path"/"$name".logfile 2>&1 &
+=======
+bash /home/sbhadral/mRNAseq/seq_code/mseek/sh/blast_"$org"_mt.sh /home/sbhadral/mRNAseq/seq_code/mseek ref/mt_"$org" "$blast_path" "$blast_path"q mt_"$org" 8 >> "$mito_path"/"$name".logfile 2>&1 &
+>>>>>>> 7e804b43a40cfa2c2dd7da3ebdd254bdbb2e9286
 
 fi;
 
